@@ -80,16 +80,17 @@ nav.main a[aria-current="page"]{color:var(--accent);background:var(--accent-soft
 .stat span{font-size:.86rem;color:var(--hero-muted)}
 
 /* contour legend: the career as an FE colour legend */
-.legend{margin-top:56px;padding-bottom:30px}
+.legend{margin-top:56px;padding-bottom:48px}
 .legend-bar{height:14px;border-radius:3px;background:var(--contour)}
-.legend-ticks{position:relative;height:84px;margin-top:6px;font-family:var(--f-mono);font-size:.72rem;color:var(--hero-muted)}
+.legend-ticks{position:relative;height:96px;margin-top:6px;font-family:var(--f-mono);font-size:.72rem;color:var(--hero-muted)}
 .legend-ticks span{position:absolute;top:0;transform:translateX(-50%);white-space:nowrap;text-align:center;line-height:1.35}
 .legend-ticks span::before{content:"";display:block;width:1px;height:7px;background:var(--hero-muted);margin:0 auto 4px}
 .legend-ticks span b{display:block;color:var(--hero-ink);font-weight:500}
 .legend-ticks span:first-child{transform:none;text-align:left}.legend-ticks span:first-child::before{margin:0 0 4px}
 .legend-ticks span:last-child{transform:translateX(-100%);text-align:right}.legend-ticks span:last-child::before{margin:0 0 4px auto}
 .legend-cap{font-family:var(--f-mono);font-size:.7rem;color:var(--hero-muted);display:flex;justify-content:space-between;margin-bottom:6px}
-.legend-ticks span:nth-child(even){top:34px}.legend-ticks span:nth-child(even)::before{height:41px}
+.legend-ticks span.l{transform:none;text-align:left}.legend-ticks span.l::before{margin:0 0 4px}.legend-ticks span.r{transform:translateX(-100%);text-align:right}.legend-ticks span.r::before{margin:0 0 4px auto}
+.legend-ticks span:nth-child(even){top:50px}.legend-ticks span:nth-child(even)::before{display:none}
 @media (max-width:700px){.legend-ticks span:not(.k){display:none}.legend-ticks span.k{top:0}.legend-ticks span.k::before{height:7px}.legend-ticks{height:50px}}
 
 /* page header for inner pages */
