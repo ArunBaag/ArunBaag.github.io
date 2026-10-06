@@ -19,3 +19,13 @@
     });
   });
 })();
+(function(){
+  var f=document.getElementById('cf'); if(!f) return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=function(id){return (document.getElementById(id).value||'').trim();};
+    var subj='Website enquiry: '+v('cf-topic')+(v('cf-co')?' ('+v('cf-co')+')':'');
+    var body='Name: '+v('cf-name')+'\nCompany: '+v('cf-co')+'\nEmail: '+v('cf-email')+'\nPhone: '+v('cf-phone')+'\nTopic: '+v('cf-topic')+'\n\n'+v('cf-msg');
+    location.href='mailto:'+f.getAttribute('data-email')+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+  });
+})();
